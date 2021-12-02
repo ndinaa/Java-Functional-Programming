@@ -6,8 +6,8 @@ public class _Consumer {
 
     public static void main(String[] args) {
 
-        greetings(new Customer("ndina", "90909090"));
-        greetingsConsumer.accept(new Customer("Duncan", "89999999"));
+        Customer ndina = new Customer("ndina", "90909090");
+        greetingsConsumer.accept(ndina);
     }
 
 
