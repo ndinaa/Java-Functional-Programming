@@ -15,6 +15,11 @@ public class _Predicate {
         System.out.println(isValidNumberPredicate.test("07000000000"));
         System.out.println(isValidNumberPredicate.test("07000000000000"));
         System.out.println(isValidNumberPredicate.test("08000000000000"));
+
+        System.out.println( isValidNumberPredicate.and(containsThree).test("07000000000"));
+        System.out.println( isValidNumberPredicate.and(containsThree).test("07300000000"));
+
+        System.out.println(isValidNumberPredicate.or(containsThree).test("07300000000"));
     }
 
     static boolean isValidNumber(String phoneNumber){
@@ -24,4 +29,10 @@ public class _Predicate {
 
     static Predicate<String> isValidNumberPredicate = phoneNumber ->
             phoneNumber.startsWith("07") && phoneNumber.length() == 11;
+
+    static Predicate<String> containsThree = phoneNumber ->
+            phoneNumber.contains("3");
+
 }
+
+
