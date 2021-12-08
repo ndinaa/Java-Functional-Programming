@@ -14,4 +14,5 @@ public class _Supplier {
 
   static Supplier<String> getDbConnectionUrlSupplier = () -> "jdbc:localhost:8443/supplier";
 
+
 }
